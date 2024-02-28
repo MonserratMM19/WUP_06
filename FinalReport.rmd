@@ -60,7 +60,7 @@ barchartGC(~race + cappun,data=mydata, type="percent")
 ```
 
 
-  By looking at the graph we can see the difference in how the white race is more in favor of the cappun than both the black race as well as the other race. another thing that we can see is how the black race is more in opposition to capun when both the white and other race. 
+  By looking at the graph we can see the difference in how the white race is more in favor of the cappun than both the black race as well as the other race. another thing that we can see is how the black race is more in opposition to cappun when both the white and other race. 
   
 
 ## Now with The Most data (fewer variables gives more data points)
@@ -71,8 +71,14 @@ barchartGC(~race + cappun,data=mydata, type="percent")
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+table1 <- xtabs(~race + cappun, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
 
-
+  These Tables show the exact numbers of both favor and opposition for each race. 
+in which shows that the white race is far more in favor of cappun when black and other race, with a favor number of 65% and only a opposition number of 35% in the other hand the black race shows the opposite with only a 42% in favor and a 57% in opposition. while the 'other' race fall more in the middle with a 55% favor and a 44% opposition. 
 
 ## Now with More data
 

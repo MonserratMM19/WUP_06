@@ -87,6 +87,13 @@ fisher.test(table1)
   This test is not showing the full results and can't be fully trusted, therefore it will be added to do a fisherXY test. 
 
 
+
+```{r}
+fisherXY(mydata$race,mydata$cappun)
+```
+  Thanks to the fisherXY Test we are able to see that all race are different from each other. with all getting different levels for differences between each other. 
+
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->

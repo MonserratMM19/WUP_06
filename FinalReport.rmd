@@ -20,7 +20,13 @@ GSS <-read.dta(file="GSS2016.dta")
 GSS <- droplevels(GSS)
 mydata <- select(GSS,sex,race,cappun,degree,relig,gunlaw,tvhours,owngun,age,wordsum)
 mydata <- na.omit(mydata)
+source("fisherXY.R")
 ```
+
+
+
+
+
 
 # Introduction
 
@@ -89,9 +95,9 @@ fisher.test(table1)
 
 
 ```{r}
-fisherXY(mydata$race,mydata$cappun)
+fisherXY(mydata$race,mydata$cappun,printAll = TRUE)
 ```
-  Thanks to the fisherXY Test we are able to see that all race are different from each other. with all getting different levels for differences between each other. 
+  The fisherXY Test is showing that there is a different for the black and white race, however not between the white and other race and black and other race. 
 
 
 # Discussion and Conclusion
